@@ -9,7 +9,8 @@ public class BankAccount {
 	private String phone;
 	
 	public BankAccount() {
-		this.balance = 0;
+		this("0000000000", 0.0, "Name", "email", "9999999999");
+		
 	}
 	
 	public BankAccount(String accNum, double balance, String customerName, String email, String phone) {

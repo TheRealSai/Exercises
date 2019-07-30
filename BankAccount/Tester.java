@@ -21,8 +21,13 @@ public class Tester {
 				case 2:
 					System.out.println("How much do you want to deposit?");
 					double amount = sc.nextDouble();
-					meet.depositFunds(amount);
-					System.out.println("Success! Deposited: " + amount);
+					if (amount > 50) {
+						System.out.println("Cannot deposit more than $50 in a single transaction. Please try again.");
+					} else {
+						meet.depositFunds(amount);
+						System.out.println("Success! Deposited: " + amount);	
+					}
+					
 					System.out.println(meet.getInfo());
 					break;
 				case 3:
@@ -33,7 +38,7 @@ public class Tester {
 					System.out.println(meet.getInfo());
 					break;
 				default:
-					System.out.println("Wrong input");
+					System.out.println("Wrong input. Please try again.");
 					break;
 				 
 				}
